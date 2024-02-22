@@ -5,6 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
+	"github.com/snoopy910/golang-gorm-postgres/handlers"
 	"github.com/snoopy910/golang-gorm-postgres/initializers"
 )
 
@@ -19,7 +20,7 @@ func init() {
 	}
 
 	initializers.ConnectDB(&config)
-	// handlers.getIndegoJson()
+	handlers.GetIndegoJson()
 	server = gin.Default()
 }
 
