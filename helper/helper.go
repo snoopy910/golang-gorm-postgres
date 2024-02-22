@@ -26,23 +26,23 @@ func getIndegoJSON () error {
 	return apiLatest.Scan(body)
 }
 
-func getWeatherJSON ([]models.Indego) error {
-	openWeatherApiUrl := "https://api.openweathermap.org/data/2.5/weather?q=philadelphia&appid=d2166073a527e474bdb3141103689b9b"
+// func getWeatherJSON ([]models.Indego) error {
+// 	openWeatherApiUrl := "https://api.openweathermap.org/data/2.5/weather?q=philadelphia&appid=d2166073a527e474bdb3141103689b9b"
 	
-	res, err := http.Get(openWeatherApiUrl)
-	if err != nil {
-		return err
-	}
-	defer res.Body.Close()
+// 	res, err := http.Get(openWeatherApiUrl)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	defer res.Body.Close()
 
-	body, err := io.ReadAll(res.Body)
-	if err != nil {
-		return err
-	}
+// 	body, err := io.ReadAll(res.Body)
+// 	if err != nil {
+// 		return err
+// 	}
 
-	var apiLatest models.JSONB
-	return apiLatest.Scan(body)
+// 	var apiLatest models.JSONB
+// 	return apiLatest.Scan(body)
 	
-}
+// }
 
 	
