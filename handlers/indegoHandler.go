@@ -1,4 +1,4 @@
-package controller
+package handlers
 
 import (
 	"encoding/json"
@@ -8,7 +8,7 @@ import (
 	"github.com/snoopy910/golang-gorm-postgres/models"
 )
 
-func getIndegoJSON() ([]models.Indego, error) {
+func getIndegoJson() ([]models.Indego, error) {
 	indegoApiUrl := "https://bts-status.bicycletransit.workers.dev/phl"
 
 	res, err := http.Get(indegoApiUrl)

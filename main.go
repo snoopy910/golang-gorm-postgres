@@ -19,7 +19,7 @@ func init() {
 	}
 
 	initializers.ConnectDB(&config)
-	controller.getIndegoJSON()
+	// handlers.getIndegoJson()
 	server = gin.Default()
 }
 
