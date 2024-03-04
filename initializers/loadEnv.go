@@ -13,6 +13,9 @@ type Config struct {
 	
 	ServerPort     string `mapstructure:"PORT"`
 	ClientOrigin string `mapstructure:"CLIENT_ORIGIN"`
+	Version string `mapstructure:"VERSION"`
+	City string `mapstructure:"CITY_NAME"`
+	OpenWeatherApiKey string `mapstructure:"OPEN_WEATHER_API_KEY"`
 }
 
 func LoadConfig(path string) (config Config, err error) {
